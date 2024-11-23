@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  ubuntu_2204test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ubuntu_2204_test
+    volumes:
+      - ./data:/data
+    privileged: true
+    stdin_open: true
+    tty: true
+    user: root
+    command: /bin/bash
